@@ -1,15 +1,9 @@
-import Image from "next/image";
-
-export default function Hero() {
+export default function Experience() {
   return (
-    <section className="min-h-screen w-full flex flex-col items-center justify-center text-center py-20 px-6 sm:px-20">
-      {/* Main content wrapper */}
-      <div className="flex flex-col items-center max-w-4xl gap-6">
-        {/* Greeting / title */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
-          Reece Davies
-        </h1>
-
+    <section className="bg-red-200 w-full py-10 px-1">
+      <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">Experience</h1>
+      <div className="flex flex-col max-w-4xl gap-6">
+        
         {/* Subtitle / description */}
         <p className="text-lg sm:text-xl max-w-xl">
           I build modern, responsive websites and web apps using Next.js and TailwindCSS.
