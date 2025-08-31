@@ -7,4 +7,4 @@ Tech Stack
 - Next.js
 - Tailwind CSS
 - React Bits (TBC)
-- Magix UI (TBC)
+- Radix Icons

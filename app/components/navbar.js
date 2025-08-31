@@ -1,5 +1,6 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
+import {GitHubLogoIcon, LinkedInLogoIcon, TwitterLogoIcon, VercelLogoIcon} from "@radix-ui/react-icons"
 
 export default function Navbar() {
   const [navOpen, setNavOpen] = useState(false);
@@ -64,10 +65,50 @@ export default function Navbar() {
               ref={socialDropdownRef}
               className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-40 rounded-md p-3 shadow-lg flex flex-col space-y-2 backdrop-blur-md border border-dark-gray bg-[#0a0a0a] z-50"
             >
-              <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:underline">GitHub</a></li>
-              <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:underline">LinkedIn</a></li>
-              <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:underline">Twitter</a></li>
-              <li><a href="https://vercel.com" target="_blank" rel="noopener noreferrer" className="hover:underline">Vercel</a></li>
+              <li>
+                <a
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2 hover:underline"
+                >
+                  <GitHubLogoIcon className="w-5 h-5" />
+                  <span>GitHub</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2 hover:underline"
+                >
+                  <LinkedInLogoIcon className="w-5 h-5" />
+                  <span>LinkedIn</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2 hover:underline"
+                >
+                  <TwitterLogoIcon className="w-5 h-5" />
+                  <span>Twitter</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://vercel.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2 hover:underline"
+                >
+                  <VercelLogoIcon className="w-5 h-5" />
+                  <span>Vercel</span>
+                </a>
+              </li>
             </ul>
           )}
         </div>
