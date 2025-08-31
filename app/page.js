@@ -1,5 +1,6 @@
 import Hero from "./components/hero"
 import Experience from "./components/experience"
+import Skills from "./components/skills"
 import Footer from "./components/footer"
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <main className="flex flex-col gap-[32px] row-start-2 items-start">
         <Hero />
         <Experience />
+        <Skills />
       </main>
       <Footer />
     </div>
