@@ -21,6 +21,7 @@ body {
 }
 
 /* Custom Tailwind utilities */
+/*dark-gray very similar to zinc-500*/
 @layer utilities {
   .border-dark-gray {
     border-color: var(--color-dark-gray);
