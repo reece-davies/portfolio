@@ -17,7 +17,7 @@ export default function Skills() {
       </div>
 
       {/* Card 3 */}
-      <div className="border border-neutral-500 rounded-lg p-6 flex-1 text-center">
+      <div className="border border-zinc-500 rounded-lg p-6 flex-1 text-center">
         <h3 className="text-lg font-semibold mb-2">Python & Machine Learning</h3>
         <p className="text-sm text-gray-300">Python programming and foundational ML concepts</p>
       </div>
