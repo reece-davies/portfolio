@@ -8,3 +8,4 @@ Tech Stack
 - Tailwind CSS
 - React Bits (TBC)
 - Radix Icons
+- Hero Icons
