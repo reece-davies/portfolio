@@ -59,10 +59,10 @@ export default function SkillsBanner() {
         /* Tailwind custom animation */
         @keyframes infinite-scroll {
           0% { transform: translateX(0%); }
-          100% { transform: translateX(-50%); }
+          100% { transform: translateX(-100%); }
         }
         .animate-infinite-scroll {
-          animation: infinite-scroll 15s linear infinite;
+          animation: infinite-scroll 20s linear infinite;
         }
       `}</style>
     </div>
