@@ -1,3 +1,5 @@
+import SkillsBanner from "./skillsbanner";
+
 export default function Skills() {
   return (
     <section className="flex flex-col w-full py-10 gap-6">
@@ -70,6 +72,10 @@ export default function Skills() {
           </p>
         </div>
       </div>
+
+      <div className="m-3" />
+
+      <SkillsBanner />
     </section>
   );
 }
