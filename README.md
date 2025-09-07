@@ -6,6 +6,6 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 Tech Stack
 - Next.js
 - Tailwind CSS
-- React Bits (TBC)
+- React Bits
 - Radix Icons
 - Hero Icons
