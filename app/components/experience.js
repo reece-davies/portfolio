@@ -10,7 +10,7 @@ export default function Experience() {
           <li>As an Operations Technician, I handle a range of tasks, including daily API user policy uploads and supporting the Accounts & Credit Control teams with refund requests and shortfall claims.</li>
           <li>A significant part of my role is to optimise internal processes and develop the supporting process guides, such as streamlining the New Starter & Leaver process for managers, Operations team and third party companies.</li>
           <li>I also serve as a fire warden, managing emergency resources like floor plans.</li>
-          <li> Additionally, I collaborate with my manager to refine <span className="text-sky-500 hover:text-sky-600 font-medium">Acturis</ span> configuration and templates, ensuring SMS, email, and document templates are consistent, cost-effective, and compliant.</li>
+          <li> Additionally, I collaborate with my manager to refine Acturis configuration and templates, ensuring SMS, email, and document templates are consistent, cost-effective, and compliant.</li>
         </ul>
       </div>
 
@@ -19,10 +19,10 @@ export default function Experience() {
         <p className="py-1 italic text-zinc-400">Trampoline Coach & Head of Marketing [06/2020 – 07/2023]</p>
         <ul className="list-disc list-outside px-8">
           <li>While pursuing my athletic career full-time, I also worked as a Trampoline Coach at Exeter Trampoline Academy (ETA).</li>
-          <li>After working for ETA for two years, I was appointed as Head of Marketing in September 2022 based on my prior experience and education in marketing from my MSc.</li>
+          <li>After working for ETA for two years, I was appointed as <a className="text-sky-400 hover:text-sky-600 focus:text-red-500 font-medium" href="https://www.instagram.com/exetertrampoline/?hl=en" target="_blank" rel="noopener noreferrer">Head of Marketing</a> in September 2022 based on my prior experience and education in marketing from my MSc.</li>
           <li>From this position, I was responsible for managing the club's social media presence, producing monthly newsletters, and coordinating public relations efforts.</li>
           <li> In addition to my coaching duties, I successfully implemented a range of marketing strategies that helped increase brand awareness and attract new customers to the club.</li>
-          <li> I also served as tech-support for ETA, specifically in regard to the deployment and management of <span className="text-sky-500 hover:text-sky-600 font-medium">SafeGaze</ span>, a software I developed for ETA in my final year of my BSc</li>
+          <li> I also served as tech-support for ETA, specifically in regard to the deployment and management of <a className="text-sky-400 hover:text-sky-600 focus:text-red-500 font-medium" href="https://youtu.be/xVNqltGqnRw?si=ciOPRYbddqoH_dcP" target="_blank" rel="noopener noreferrer">SafeGaze</a>, a software I developed for ETA in my final year of my BSc</li>
         </ul>
       </div>
 
@@ -32,7 +32,7 @@ export default function Experience() {
         <ul className="list-disc list-outside px-8">
           <li>I was awarded an Industrial Placement within the Met Office (Exeter). During this time, I worked as a cyber security analyst in the Cyber Security Operations Centre (CSOC).</li>
           <li>My team and I were responsible for the logging and monitoring of the security of Met Office’s internal systems.</li>
-          <li>Additionally, I was involved in the deployment of <span className="text-sky-500 hover:text-sky-600 font-medium">The Logging, Monitoring and Alerting project (LMA Project) </ span> which makes use of Elastic Stack’s detection tools and resources for identifying malicious activity from within the organisation.</li>
+          <li>Additionally, I was involved in the deployment of <a className="text-sky-400 hover:text-sky-600 focus:text-red-500 font-medium" href="https://www.elastic.co/customers/met-office" target="_blank" rel="noopener noreferrer">The Logging, Monitoring and Alerting project (LMA Project)</a> which makes use of Elastic Stack’s detection tools and resources for identifying malicious activity from within the organisation.</li>
           <li>My experience at the Met Office allowed me to develop as a professional and provided me with a deeper understanding of how to work collaboratively with a team in a technology-focused role.</li>
         </ul>
       </div>
