@@ -10,16 +10,26 @@ export default function Home() {
     <div className="font-sans flex flex-col min-h-screen">
       <section className="relative w-full flex">
         <div
-          style={{ width: '100vw', height: '100vh', position: 'absolute', left: '0', top: '0' }}
-          className="-z-10">
+          style={{
+            width: "100vw",
+            height: "100vh",
+            position: "absolute",
+            left: 0,
+            top: 0,
+            // mask fades the bottom — tweak 70% to move the start of the fade
+            WebkitMaskImage: "linear-gradient(180deg, black 85%, transparent 100%)",
+            maskImage: "linear-gradient(180deg, black 85%, transparent 100%)",
+          }}
+          className="-z-10"
+        >
           <DotGrid
             dotSize={10}
             gap={15}
             baseColor="#1a1a1a"
             activeColor="#0ea5e9"
-            proximity={120}
+            proximity={150}
             shockRadius={250}
-            shockStrength={5}
+            shockStrength={6}
             resistance={750}
             returnDuration={1.5}
           />
