@@ -4,6 +4,7 @@ import Skills from "./components/skills"
 import Footer from "./components/footer"
 import DotGrid from "./components/reactbits/DotGrid"
 import ProfileSummary from "./components/profilesummary"
+import Projects from "./components/projects"
 
 export default function Home() {
   return (
@@ -43,6 +44,7 @@ export default function Home() {
       <main className="flex flex-col items-start px-3 sm:px-25 gap-2">
         <ProfileSummary />
         <Experience />
+        <Projects />
         <Skills />
       </main>
       <Footer />
