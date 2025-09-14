@@ -9,7 +9,7 @@ export default function Skills() {
 
       <div className="flex flex-col md:flex-row justify-between max-w-4xl mx-auto mt-5 gap-6 w-full">
         {/* Card 1 */}
-        <div className="border border-zinc-500 rounded-lg p-6 flex-1 text-center">
+        <div className="border border-zinc-500 rounded-2xl p-6 flex-1 text-center">
           <svg 
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -29,7 +29,7 @@ export default function Skills() {
         </div>
 
         {/* Card 2 */}
-        <div className="border border-zinc-500 rounded-lg p-6 flex-1 text-center">
+        <div className="border border-zinc-500 rounded-2xl p-6 flex-1 text-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -51,7 +51,7 @@ export default function Skills() {
         </div>
 
         {/* Card 3 */}
-        <div className="border border-zinc-500 rounded-lg p-6 flex-1 text-center">
+        <div className="border border-zinc-500 rounded-2xl p-6 flex-1 text-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
