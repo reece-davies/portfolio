@@ -27,15 +27,22 @@ export default function Projects() {
         </div>
 
         {/* Card 2 */}
-        <div className="border border-zinc-500 rounded-2xl p-6 flex-1 text-start">
+        <div className="border border-zinc-500 rounded-2xl p-6 flex-1 start">
           <div>IMG</div>
 
-          <h3 className="text-lg font-semibold mb-4 mt-4">Project</h3>
-          <p className="text-sm text-gray-300">
+          <h3 className="text-lg font-semibold mb-2 mt-4">Project Name</h3>
+          <p className="text-gray-300">
             Project context
           </p>
-          <p>Languages/frameworks used</p>
-          <GitHubLogoIcon className="w-5 h-5" />
+          <div className="flex justify-between mt-2">
+            <div className="flex items-center gap-2">
+              <a className="text-sm bg-sky-800 px-2 py-1 rounded-lg">Language</a>
+              <a className="text-sm bg-sky-800 px-2 py-1 rounded-lg">Framework</a>
+            </div>
+            <div>
+              <GitHubLogoIcon className="w-6 h-full"/>
+            </div>
+          </div>
         </div>
 
       </div>
