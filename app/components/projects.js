@@ -18,7 +18,7 @@ export default function Projects() {
       id: 2,
       name: "Inventory-Sync",
       context: "MERN stack app for inventory management. Fully functional and deployed to Render.",
-      image: "/projectimages/placeholder.jpeg",
+      image: "/projectimages/inventorysync.PNG",
       link: "https://inventory-sync-frontend.onrender.com/",
       github: "https://github.com/reece-davies/Inventory-Sync",
       tech: ["React", "Express", "Node.js", "MongoDB"],
