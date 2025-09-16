@@ -1,6 +1,6 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-import {GitHubLogoIcon, LinkedInLogoIcon, TwitterLogoIcon, VercelLogoIcon} from "@radix-ui/react-icons"
+import {GitHubLogoIcon, LinkedInLogoIcon, TwitterLogoIcon, VercelLogoIcon, InstagramLogoIcon} from "@radix-ui/react-icons"
 
 export default function Navbar() {
   const [navOpen, setNavOpen] = useState(false);
@@ -41,11 +41,11 @@ export default function Navbar() {
               ref={navDropdownRef}
               className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-40 rounded-md p-3 shadow-lg flex flex-col space-y-2 backdrop-blur-md border border-zinc-500 bg-[#0a0a0a] z-50"
             >
-              <li><a href="#landing-page" className="hover:underline">Landing Page</a></li>
+              <li><a href="#hero" className="hover:underline">Hero</a></li>
+              <li><a href="#profilesummary" className="hover:underline">Profile Summary</a></li>
               <li><a href="#experience" className="hover:underline">Experience</a></li>
-              <li><a href="#skills" className="hover:underline">Skills</a></li>
               <li><a href="#projects" className="hover:underline">Projects</a></li>
-              <li><a href="#contact-me" className="hover:underline">Contact Me</a></li>
+              <li><a href="#skills" className="hover:underline">Skills</a></li>
             </ul>
           )}
         </div>
@@ -67,7 +67,7 @@ export default function Navbar() {
             >
               <li>
                 <a
-                  href="https://github.com"
+                  href="https://github.com/reece-davies"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 hover:underline"
@@ -78,7 +78,7 @@ export default function Navbar() {
               </li>
               <li>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/reece-davies-063436110/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 hover:underline"
@@ -89,24 +89,13 @@ export default function Navbar() {
               </li>
               <li>
                 <a
-                  href="https://twitter.com"
+                  href="https://www.instagram.com/reece.dylavies/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 hover:underline"
                 >
-                  <TwitterLogoIcon className="w-5 h-5" />
-                  <span>Twitter</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://vercel.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-2 hover:underline"
-                >
-                  <VercelLogoIcon className="w-5 h-5" />
-                  <span>Vercel</span>
+                  <InstagramLogoIcon className="w-5 h-5" />
+                  <span>Instagram</span>
                 </a>
               </li>
             </ul>
