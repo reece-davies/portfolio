@@ -71,17 +71,19 @@ export default function Projects() {
         {projects.map((project) => (
           <div
             key={project.id}
-            className="border border-zinc-500 rounded-2xl flex flex-col overflow-hidden transition duration-500 ease-in-out hover:scale-[1.04]"
+            className="group border border-zinc-500 rounded-2xl flex flex-col overflow-hidden transition duration-500 ease-in-out hover:scale-[1.04]"
           >
             {/* Image */}
             <a href={project.link} target="_blank" rel="noopener noreferrer" className="m-3">
+              <div className="relative overflow-hidden rounded-xl">
               <Image
                 src={project.image}
                 alt={project.name}
                 width={600}
                 height={400}
-                className="w-full h-48 object-cover rounded-xl"
+                className="w-full h-48 object-cover rounded-xl transition-transform duration-500 ease-in-out group-hover:scale-105"
               />
+              </div>
             </a>
 
             {/* Content */}
