@@ -5,6 +5,7 @@ import Footer from "./components/footer"
 import DotGrid from "./components/reactbits/DotGrid"
 import ProfileSummary from "./components/profilesummary"
 import Projects from "./components/projects"
+import Contact from "./components/contact"
 
 export default function Home() {
   return (
@@ -46,6 +47,7 @@ export default function Home() {
         <Experience />
         <Projects />
         <Skills />
+        <Contact />
       </main>
       <Footer />
     </div>

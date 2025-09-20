@@ -32,7 +32,7 @@ export default function SkillsBanner() {
   ];
 
   return (
-    <div className="relative overflow-hidden w-full h-12 my-8">
+    <div className="relative overflow-hidden w-full h-12 mt-8">
       {/* Gradient fade overlays */}
       <div className="absolute left-0 top-0 h-full w-24 pointer-events-none bg-gradient-to-r from-[#0a0a0a] to-transparent z-10" />
       <div className="absolute right-0 top-0 h-full w-24 pointer-events-none bg-gradient-to-l from-[#0a0a0a] to-transparent z-10" />
