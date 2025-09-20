@@ -1,7 +1,7 @@
 export default function ProfileSummary() {
   return (
     <section id="profilesummary" className="flex flex-col w-full py-10 gap-6">
-      <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold pt-10 pb-2">Profile Summary</h1>
+      <h1 className="text-4xl sm:text-5xl font-bold pt-10 pb-2">Profile Summary</h1>
 
       <div className="px-1 sm:px-5 md:px-25">
         <p className="text-justify">

@@ -10,7 +10,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="flex flex-col w-full py-10 gap-6">
-      <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold pt-10 pb-2">Contact</h1>
+      <h1 className="text-4xl sm:text-5xl font-bold pt-10 pb-2">Contact</h1>
 
       <form className="px-1 sm:px-5 md:px-20" onSubmit={(e) => e.preventDefault()}>
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">

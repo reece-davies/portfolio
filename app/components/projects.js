@@ -63,7 +63,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="flex flex-col w-full py-10 gap-6">
-      <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold pt-10 pb-2">
+      <h1 className="text-4xl sm:text-5xl font-bold pt-10 pb-2">
         Projects
       </h1>
 
