@@ -12,7 +12,7 @@ export default function Hero() {
   ]
 
   return (
-    <section className="min-h-screen w-full flex flex-col items-center justify-center text-center py-20 px-6 sm:px-20">
+    <section id="hero" className="min-h-screen w-full flex flex-col items-center justify-center text-center py-20 px-6 sm:px-20">
       {/* Main content wrapper */}
       <div className="flex flex-col items-center max-w-4xl gap-6">
         {/* Greeting / title */}
@@ -36,13 +36,13 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 mt-4">
           <a
             href="#projects"
-            className="py-1 px-3 bg-sky-600 text-white rounded-lg font-medium hover:bg-sky-700 transition"
+            className="py-1 px-3 bg-sky-600 text-white rounded-lg hover:bg-sky-800 transition"
           >
             Download CV
           </a>
           <a
             href="#contact"
-            className="py-1 px-3 border border-sky-600 text-sky-600 rounded-lg font-medium hover:bg-sky-700 transition"
+            className="py-1 px-3 border border-sky-600 text-sky-600 rounded-lg font-medium hover:bg-sky-800 hover:border-none hover:text-white transition"
           >
             Contact Me
           </a>

@@ -1,6 +1,6 @@
 export default function Experience() {
   return (
-    <section className="flex flex-col w-full py-10 gap-6">
+    <section id="experience" className="flex flex-col w-full py-10 gap-6">
       <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold pt-10 pb-2">Experience</h1>
 
       <div className="px-0 sm:px-5 md:px-25">
