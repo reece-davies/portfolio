@@ -35,7 +35,8 @@ export default function Hero() {
         {/* Call to action buttons */}
         <div className="flex flex-col sm:flex-row gap-4 mt-4">
           <a
-            href="#projects"
+            href="/Reece Davies CV 1.8 (tech).pdf"
+            download
             className="py-1 px-3 bg-sky-600 text-white rounded-lg hover:bg-sky-900 transition-colors duration-500 ease-in-out"
           >
             Download CV
