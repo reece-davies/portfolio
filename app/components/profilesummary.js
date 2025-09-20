@@ -3,7 +3,7 @@ export default function ProfileSummary() {
     <section id="profilesummary" className="flex flex-col w-full py-10 gap-6">
       <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold pt-10 pb-2">Profile Summary</h1>
 
-      <div className="px-0 sm:px-5 md:px-25">
+      <div className="px-1 sm:px-5 md:px-25">
         <p className="text-justify">
           I graduated with a BSc (Honours) Computer Science from Plymouth University and a MSc Management from the <a className="text-sky-400 hover:text-sky-600 font-medium" href="https://news-archive.exeter.ac.uk/2022/september/articles/universityofexeterbusines-1.html" target="_blank" rel="noopener noreferrer"> University of Exeter Business School</a>.
           My BSc fully encompassed software development with C# in the .NET framework, and also covered a wide range of topics and programming languages, including Python, Machine Learning, Java Design Patterns, and JavaScript, among others.

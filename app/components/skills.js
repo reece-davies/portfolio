@@ -7,7 +7,7 @@ export default function Skills() {
         Skills
       </h1>
 
-      <div className="flex flex-col md:flex-row justify-between max-w-4xl mx-auto mt-5 gap-6 w-full">
+      <div className="flex flex-col lg:flex-row justify-between max-w-4xl mx-auto mt-5 gap-6 w-full px-1 sm:px-10">
         {/* Card 1 */}
         <div className="border border-zinc-500 rounded-2xl p-6 flex-1 text-center">
           <svg 

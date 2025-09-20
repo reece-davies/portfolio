@@ -67,11 +67,11 @@ export default function Projects() {
         Projects
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto w-full mt-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mx-auto w-full mt-6 px-1 sm:px-10">
         {projects.map((project) => (
           <div
             key={project.id}
-            className="border border-zinc-500 rounded-2xl flex flex-col overflow-hidden"
+            className="border border-zinc-500 rounded-2xl flex flex-col overflow-hidden transition duration-500 ease-in-out hover:scale-[1.04]"
           >
             {/* Image */}
             <a href={project.link} target="_blank" rel="noopener noreferrer" className="m-3">
@@ -87,7 +87,7 @@ export default function Projects() {
             {/* Content */}
             <div className="flex flex-col flex-1 pt-2 px-6 pb-6">
               <a href={project.link} target="_blank" rel="noopener noreferrer">
-                <h3 className="text-lg font-semibold mb-2 hover:text-sky-400 transition-colors">
+                <h3 className="text-lg font-semibold mb-2">
                   {project.name}
                 </h3>
               </a>
@@ -111,9 +111,9 @@ export default function Projects() {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-sky-400 transition-colors"
+                  className="hover:text-sky-600 transition-colors"
                 >
-                  <GitHubLogoIcon className="w-6 h-6" />
+                  <GitHubLogoIcon className="w-6 h-6 transition-colors duration-300 ease-in-out" />
                 </a>
               </div>
             </div>

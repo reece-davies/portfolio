@@ -36,13 +36,13 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 mt-4">
           <a
             href="#projects"
-            className="py-1 px-3 bg-sky-600 text-white rounded-lg hover:bg-sky-800 transition"
+            className="py-1 px-3 bg-sky-600 text-white rounded-lg hover:bg-sky-900 transition-colors duration-500 ease-in-out"
           >
             Download CV
           </a>
           <a
             href="#contact"
-            className="py-1 px-3 border border-sky-600 text-sky-600 rounded-lg font-medium hover:bg-sky-800 hover:border-none hover:text-white transition"
+            className="py-1 px-3 border border-neutral-300 text-neutral-300 rounded-lg font-medium hover:bg-zinc-100 hover:border-zinc-100 hover:text-zinc-900 transition-colors duration-700 ease-in-out"
           >
             Contact Me
           </a>
