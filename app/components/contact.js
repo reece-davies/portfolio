@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import FadeContent from "./reactbits/FadeContent";
 
 export default function Contact() {
   const [mounted, setMounted] = useState(false);
@@ -10,7 +11,9 @@ export default function Contact() {
 
   return (
     <section id="contact" className="flex flex-col w-full py-10 gap-6">
-      <h1 className="text-4xl sm:text-5xl font-bold pt-10 pb-2">Contact</h1>
+      <FadeContent blur={false} duration={1800} easing="ease-out" initialOpacity={0} delay={250}>
+        <h1 className="text-4xl sm:text-5xl font-bold pt-10 pb-2">Contact</h1>
+      </FadeContent>
 
       <form className="px-1 sm:px-5 md:px-20" onSubmit={(e) => e.preventDefault()}>
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">

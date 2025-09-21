@@ -2,6 +2,8 @@
 
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
+import FadeContent from "./reactbits/FadeContent";
+import AnimatedContent from "./reactbits/AnimatedContent";
 
 export default function Projects() {
   const projects = [
@@ -62,11 +64,22 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="flex flex-col w-full py-10 gap-6">
-      <h1 className="text-4xl sm:text-5xl font-bold pt-10 pb-2">
-        Projects
-      </h1>
+    <section id="projects" className="flex flex-col w-full py-10 gap-6 overflow-x-hidden overflow-y-hidden">
+      <FadeContent blur={false} duration={1800} easing="ease-out" initialOpacity={0} delay={250}>
+        <h1 className="text-4xl sm:text-5xl font-bold pt-10 pb-2">Projects</h1>
+      </FadeContent>
 
+<AnimatedContent
+        distance={150}
+        direction="vertical"
+        reverse={false}
+        duration={1.2}
+        initialOpacity={0}
+        animateOpacity
+        scale={1.1}
+        threshold={0.2}
+        delay={0.3}
+      >
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mx-auto w-full mt-6 px-1 sm:px-10">
         {projects.map((project) => (
           <div
@@ -122,6 +135,7 @@ export default function Projects() {
           </div>
         ))}
       </div>
+      </AnimatedContent>
     </section>
   );
 }
