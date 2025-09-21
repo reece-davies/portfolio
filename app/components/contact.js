@@ -9,21 +9,47 @@ export default function Contact() {
 
   if (!mounted) return null; // prevent SSR/hydration mismatch
 
+  // Call Mailjet API
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const data = {
+      name: e.target.name.value,
+      email: e.target.email.value,
+      company: e.target.company.value,
+      message: e.target.message.value,
+    };
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    if (res.ok) {
+      alert("Message sent successfully!");
+      e.target.reset();
+    } else {
+      alert("Error sending message.");
+    }
+  };
+
+
   return (
     <section id="contact" className="flex flex-col w-full py-10 gap-6">
       <FadeContent blur={false} duration={1800} easing="ease-out" initialOpacity={0} delay={250}>
         <h1 className="text-4xl sm:text-5xl font-bold pt-10 pb-2">Contact</h1>
       </FadeContent>
 
-      <form className="px-1 sm:px-5 md:px-20" onSubmit={(e) => e.preventDefault()}>
+      <form className="px-1 sm:px-5 md:px-20" onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
-            <label htmlFor="first-name" className="block">Name</label>
+            <label htmlFor="name" className="block">Name</label>
             <div className="mt-2">
               <input
-                id="first-name"
+                id="name"
                 type="text"
-                name="first-name"
+                name="name"
                 autoComplete="given-name"
                 placeholder="John Doe"
                 className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-sky-600"
