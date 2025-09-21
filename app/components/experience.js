@@ -14,7 +14,10 @@ export default function Experience() {
           <h2 className="text-lg font-bold">Insync Insurance</h2>
           <p className="py-1 italic text-zinc-400">Digital Service Desk Assistant [06/2025 – present]</p>
           <ul className="list-disc list-outside px-8">
-            <li>Content</li>
+            <li>Provide frontline support for <a className="text-sky-400 hover:text-sky-600 font-medium" href="https://www.iceinsuretech.com/ice-policy/" target="_blank" rel="noopener noreferrer">ICE Policy</a> (our digital products insurance software), diagnosing issues with configuration, XML/Python rating scripts, document generation, and analytics requests.</li>
+            <li>Investigate and identify root causes of software issues, proposing solutions for approved changes, and escalating to internal developers or third-party vendors when required.</li>
+            <li>Manage and resolve YouTrack tickets from internal users, ensuring timely and accurate responses while maintaining system integrity and compliance.</li>
+            <li>Collaborate with cross-functional teams to support future enhancements and software improvements, bridging the gap between support and development.</li>
           </ul>
         </FadeContent>
       </div>
@@ -26,7 +29,7 @@ export default function Experience() {
           <ul className="list-disc list-outside px-8">
             <li>Optimised internal processes and authored process guides, including a streamlined New Starter & Leaver workflow for managers, Operations, and third parties.</li>
             <li>Supported Accounts & Credit Control teams by processing API user policies, refund requests, and shortfall claims.</li>
-            <li>Collaborated with management to refine Acturis configuration and templates, ensuring SMS, email, and documents were consistent, cost-effective, and compliant.</li>
+            <li>Collaborated with management to refine <a className="text-sky-400 hover:text-sky-600 font-medium" href="https://www.acturis.com/" target="_blank" rel="noopener noreferrer">Acturis</a> configuration and templates, ensuring SMS, email, and documents were consistent, cost-effective, and compliant.</li>
             <li>Oversaw core systems operations including monitoring alerts, managing hardware distribution, and maintaining software updates, while also serving as a designated fire warden and trained first-aider.</li>
           </ul>
         </FadeContent>
