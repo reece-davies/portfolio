@@ -1,17 +1,20 @@
 "use client";
+
 import { useState, useEffect } from "react";
+import { PaperPlaneIcon } from "@radix-ui/react-icons";
 import FadeContent from "./reactbits/FadeContent";
 
 export default function Contact() {
   const [mounted, setMounted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => setMounted(true), []);
 
-  if (!mounted) return null; // prevent SSR/hydration mismatch
+  if (!mounted) return null;
 
-  // Call Mailjet API
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     const data = {
       name: e.target.name.value,
@@ -22,7 +25,9 @@ export default function Contact() {
 
     const res = await fetch("/api/contact", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(data),
     });
 
@@ -32,83 +37,214 @@ export default function Contact() {
     } else {
       alert("Error sending message.");
     }
+
+    setLoading(false);
   };
 
-
   return (
-    <section id="contact" className="flex flex-col w-full py-10 gap-6">
-      <FadeContent blur={false} duration={1800} easing="ease-out" initialOpacity={0} delay={250}>
-        <h1 className="text-4xl sm:text-5xl font-bold pt-10 pb-2">Contact</h1>
+    <section
+      id="contact"
+      className="w-full py-14 px-6"
+    >
+      <FadeContent
+        blur={false}
+        duration={1800}
+        easing="ease-out"
+        initialOpacity={0}
+        delay={200}
+      >
+        <div className="max-w-7xl mx-auto mb-3">
+
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
+            Contact
+          </h1>
+
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-zinc-400">
+            Whether you have a software opportunity, a project you'd like to discuss, or simply want to connect, I'd love to hear from you.
+          </p>
+
+        </div>
       </FadeContent>
 
-      <form className="px-1 sm:px-5 md:px-20" onSubmit={handleSubmit}>
-        <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-          <div>
-            <label htmlFor="name" className="block">Name</label>
-            <div className="mt-2">
+      <div
+        className="
+          max-w-7xl
+          mx-auto
+          rounded-3xl
+          border
+          border-zinc-700
+          bg-zinc-900/40
+          backdrop-blur-md
+          p-8
+          md:p-10
+        "
+      >
+
+        <form
+          onSubmit={handleSubmit}
+          className="grid gap-6"
+        >
+
+          <div className="grid gap-6 md:grid-cols-2">
+
+            <div>
+
+              <label className="block mb-2 text-sm font-medium">
+                Name
+              </label>
+
               <input
                 id="name"
-                type="text"
                 name="name"
-                autoComplete="given-name"
+                type="text"
                 placeholder="John Doe"
-                className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-sky-600"
+                autoComplete="given-name"
+                required
+                className="
+                  w-full
+                  rounded-xl
+                  border
+                  border-zinc-700
+                  bg-zinc-950/40
+                  px-4
+                  py-3
+                  text-white
+                  placeholder:text-zinc-500
+                  outline-none
+                  transition
+                  focus:border-sky-500
+                "
               />
+
             </div>
+
+            <div>
+
+              <label className="block mb-2 text-sm font-medium">
+                Company
+              </label>
+
+              <input
+                id="company"
+                name="company"
+                type="text"
+                placeholder="Company Ltd."
+                autoComplete="organization"
+                className="
+                  w-full
+                  rounded-xl
+                  border
+                  border-zinc-700
+                  bg-zinc-950/40
+                  px-4
+                  py-3
+                  text-white
+                  placeholder:text-zinc-500
+                  outline-none
+                  transition
+                  focus:border-sky-500
+                "
+              />
+
+            </div>
+
           </div>
 
           <div>
-            <label htmlFor="company" className="block">Company</label>
-            <div className="mt-2">
-              <input
-                id="company"
-                type="text"
-                name="company"
-                autoComplete="organization"
-                placeholder="Corporation Inc."
-                className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-sky-600"
-              />
-            </div>
+
+            <label className="block mb-2 text-sm font-medium">
+              Email
+            </label>
+
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="john@email.com"
+              autoComplete="email"
+              required
+              className="
+                w-full
+                rounded-xl
+                border
+                border-zinc-700
+                bg-zinc-950/40
+                px-4
+                py-3
+                text-white
+                placeholder:text-zinc-500
+                outline-none
+                transition
+                focus:border-sky-500
+              "
+            />
+
           </div>
 
-          <div className="sm:col-span-2">
-            <label htmlFor="email" className="block">Email</label>
-            <div className="mt-2">
-              <input
-                id="email"
-                type="email"
-                name="email"
-                autoComplete="email"
-                placeholder="email@gmail.com"
-                className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-sky-600"
-              />
-            </div>
+          <div>
+
+            <label className="block mb-2 text-sm font-medium">
+              Message
+            </label>
+
+            <textarea
+              id="message"
+              name="message"
+              rows={7}
+              placeholder="Tell me about your project..."
+              required
+              className="
+                w-full
+                rounded-xl
+                border
+                border-zinc-700
+                bg-zinc-950/40
+                px-4
+                py-3
+                text-white
+                placeholder:text-zinc-500
+                outline-none
+                transition
+                resize-none
+                focus:border-sky-500
+              "
+            />
+
           </div>
 
-          <div className="sm:col-span-2">
-            <label htmlFor="message" className="block">Message</label>
-            <div className="mt-2">
-              <textarea
-                id="message"
-                name="message"
-                rows={4}
-                defaultValue={""}
-                placeholder="Type your message here."
-                className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-sky-600"
-              />
-            </div>
-          </div>
-        </div>
+          <div className="flex justify-end pt-2">
 
-        <div className="mt-10">
-          <button
-            type="submit"
-            className="block w-full rounded-md bg-sky-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-sky-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600 transition-colors duration-500 ease-in-out"
-          >
-            Let's talk
-          </button>
-        </div>
-      </form>
+            <button
+              type="submit"
+              disabled={loading}
+              className="
+                inline-flex
+                items-center
+                gap-2
+                rounded-xl
+                bg-sky-600
+                px-6
+                py-3
+                font-medium
+                transition-all
+                duration-300
+                hover:bg-sky-500
+                hover:scale-[1.02]
+                disabled:opacity-60
+                cursor-pointer
+              "
+            >
+              <PaperPlaneIcon />
+
+              {loading ? "Sending..." : "Let's Talk"}
+
+            </button>
+
+          </div>
+
+        </form>
+
+      </div>
     </section>
   );
 }
