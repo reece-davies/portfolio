@@ -25,7 +25,7 @@ export default function Navbar() {
   return (
     <div className="fixed top-4 left-1/2 -translate-x-1/2 z-50 p-5">
       {/* Navbar */}
-      <nav className="flex items-center justify-evenly w-80 sm:w-120 md:w-150 max-w-screen px-6 py-4 rounded-full shadow-md backdrop-blur-md border border-zinc-500">
+      <nav className="flex items-center justify-evenly w-80 sm:w-120 md:w-150 max-w-screen px-6 py-4 rounded-full shadow-md backdrop-blur-md border border-zinc-600">
         {/* Navigation Button */}
         <div className="relative">
           <button
@@ -39,7 +39,7 @@ export default function Navbar() {
           {navOpen && (
             <ul
               ref={navDropdownRef}
-              className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-40 rounded-xl p-3 shadow-lg flex flex-col space-y-2 backdrop-blur-md border border-zinc-500 bg-[#0a0a0a] z-50"
+              className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-40 rounded-xl p-3 shadow-lg flex flex-col space-y-2 backdrop-blur-md border border-zinc-600 bg-[#0a0a0a] z-50"
             >
               <li><a href="#hero" className="hover:underline">Hero</a></li>
               <li><a href="#profilesummary" className="hover:underline">Profile Summary</a></li>
@@ -64,7 +64,7 @@ export default function Navbar() {
           {socialOpen && (
             <ul
               ref={socialDropdownRef}
-              className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-40 rounded-xl p-3 shadow-lg flex flex-col space-y-2 backdrop-blur-md border border-zinc-500 bg-[#0a0a0a] z-50"
+              className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-40 rounded-xl p-3 shadow-lg flex flex-col space-y-2 backdrop-blur-md border border-zinc-600 bg-[#0a0a0a] z-50"
             >
               <li>
                 <a
