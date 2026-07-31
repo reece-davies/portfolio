@@ -1,21 +1,63 @@
 'use client'
 
-import Image from "next/image";
 import TextType from "./reactbits/TextType";
 import FadeContent from "./reactbits/FadeContent";
+import { DownloadIcon, ArrowRightIcon } from "@radix-ui/react-icons";
+import FallingText from './reactbits/FallingText';
 
 export default function Hero() {
   const phrases = [
-    "Hi, I’m Reece Davies...",
     "Software engineer, web developer…",
     "& Technology enthusiast"
   ]
 
   return (
-    <section id="hero" className="min-h-screen w-full flex flex-col items-center justify-center text-center py-20 px-6 sm:px-20">
+    <section 
+      id="hero" 
+      className="
+        min-h-screen 
+        w-full 
+        flex 
+        flex-col 
+        items-center 
+        justify-center 
+        text-center 
+        py-20 
+        px-6 
+        sm:px-20
+      "
+    >
+
       {/* Main content wrapper */}
-      <div className="flex flex-col items-center max-w-4xl gap-6">
-        {/* Greeting / title */}
+      <div className="flex flex-col items-center max-w-4xl gap-4">
+
+        {/* Falling name animation */}
+        <div
+          className="
+            relative
+            h-40
+            sm:h-44
+            md:h-48
+            w-full
+            flex
+            items-center
+            justify-center
+            overflow-visible
+          "
+        >
+          <FallingText
+            text="REECE DAVIES"
+            highlightWords={["REECE", "DAVIES"]}
+            highlightClass="highlighted"
+            trigger="hover"
+            backgroundColor="transparent"
+            wireframes={false}
+            gravity={0.35}
+            fontSize="clamp(2.5rem, 8vw, 4rem)"
+            mouseConstraintStiffness={0.9}
+          />
+        </div>
+
         <TextType 
           text={phrases}
           typingSpeed={75}
@@ -25,30 +67,77 @@ export default function Hero() {
           className="text-3xl sm:text-4xl font-bold"
         />
 
+
         {/* Subtitle / description */}
-        <FadeContent blur={false} duration={3000} easing="ease-out" initialOpacity={0} delay={700}>
+        <FadeContent 
+          blur={false} 
+          duration={3000} 
+          easing="ease-out" 
+          initialOpacity={0} 
+          delay={700}
+        >
           <p className="text-lg sm:text-xl max-w-xl text-gray-300">
             I design and develop reliable, user-focused applications across the web and beyond.
           </p>
         </FadeContent>
 
+
         {/* Call to action buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 mt-4">
+        <div className="mt-4 md:mt-10 flex flex-col md:flex-row justify-center gap-4">
+
           <a
             href="/Reece Davies CV 2.1 (tech).pdf"
             download
-            className="py-1 px-3 bg-sky-600 text-white rounded-lg hover:bg-sky-900 transition-colors duration-500 ease-in-out"
+            className="
+              inline-flex
+              items-center
+              justify-center
+              gap-2
+              rounded-xl
+              bg-sky-600
+              px-6
+              py-3
+              font-medium
+              transition-all
+              duration-300
+              hover:bg-sky-500
+              hover:scale-[1.02]
+            "
           >
+            <DownloadIcon />
             Download CV
           </a>
+
+
           <a
             href="#contact"
-            className="py-1 px-3 border border-neutral-300 text-neutral-300 rounded-lg font-medium hover:bg-zinc-100 hover:border-zinc-100 hover:text-zinc-900 transition-colors duration-700 ease-in-out"
+            className="
+              inline-flex
+              items-center
+              justify-center
+              gap-2
+              rounded-xl
+              border
+              border-zinc-700
+              bg-zinc-900/40
+              backdrop-blur-md
+              px-6
+              py-3
+              font-medium
+              transition-all
+              duration-300
+              hover:border-sky-500
+              hover:text-sky-300
+            "
           >
             Contact Me
+            <ArrowRightIcon />
           </a>
+
         </div>
+
       </div>
+
     </section>
   );
 }
