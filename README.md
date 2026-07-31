@@ -9,3 +9,4 @@ Tech Stack
 - React Bits
 - Radix Icons
 - Hero Icons
+- Mailjet
