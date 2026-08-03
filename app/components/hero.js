@@ -23,7 +23,7 @@ export default function Hero() {
         justify-center 
         text-center 
         py-20 
-        px-6 
+        px-2 
         sm:px-20
       "
     >

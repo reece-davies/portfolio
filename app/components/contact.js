@@ -44,7 +44,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="w-full py-14 px-6"
+      className="w-full py-14 px-2"
     >
       <FadeContent
         blur={false}

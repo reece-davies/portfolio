@@ -6,7 +6,7 @@ export default function ProfileSummary() {
   return (
     <section
       id="profilesummary"
-      className="w-full py-14 px-6"
+      className="w-full py-14 px-2"
     >
       <div className="mx-auto max-w-5xl">
 

@@ -66,7 +66,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="w-full py-14 px-6 overflow-hidden"
+      className="w-full py-14 px-2 overflow-hidden"
     >
       <div className="mx-auto max-w-7xl">
         <FadeContent

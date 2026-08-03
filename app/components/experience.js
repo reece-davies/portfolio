@@ -111,7 +111,7 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="w-full py-14 px-6"
+      className="w-full py-14 px-2"
     >
       <div className="mx-auto max-w-7xl">
 
