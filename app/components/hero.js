@@ -2,142 +2,100 @@
 
 import TextType from "./reactbits/TextType";
 import FadeContent from "./reactbits/FadeContent";
-import { DownloadIcon, ArrowRightIcon } from "@radix-ui/react-icons";
-import FallingText from './reactbits/FallingText';
+import ProfileCard from "./profilecard";
+import { DownloadIcon, ArrowRightIcon, GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 
 export default function Hero() {
   const phrases = [
-    "Software engineer, web developer…",
-    "& Technology enthusiast"
-  ]
+    "Full-stack developer",
+    "React, Next.js & Node.js",
+    "Clean, maintainable code",
+  ];
 
   return (
-    <section 
-      id="hero" 
-      className="
-        min-h-screen 
-        w-full 
-        flex 
-        flex-col 
-        items-center 
-        justify-center 
-        text-center 
-        py-20 
-        px-2 
-        sm:px-20
-      "
+    <section
+      id="hero"
+      className="min-h-screen w-full flex items-center py-20 px-2 sm:px-10"
     >
+      <div className="mx-auto w-full max-w-6xl flex flex-col gap-5">
 
-      {/* Main content wrapper */}
-      <div className="flex flex-col items-center max-w-4xl gap-4">
-
-        {/* Falling name animation */}
-        <div
-          className="
-            relative
-            h-40
-            sm:h-44
-            md:h-48
-            w-full
-            flex
-            items-center
-            justify-center
-            overflow-visible
-          "
-        >
-          <FallingText
-            text="REECE DAVIES"
-            highlightWords={["REECE", "DAVIES"]}
-            highlightClass="highlighted"
-            trigger="hover"
-            backgroundColor="transparent"
-            wireframes={false}
-            gravity={0.35}
-            fontSize="clamp(2.5rem, 8vw, 4rem)"
-            mouseConstraintStiffness={0.9}
-          />
-        </div>
-
-        <TextType 
-          text={phrases}
-          typingSpeed={75}
-          pauseDuration={1600}
-          showCursor={true}
-          cursorCharacter="_"
-          className="text-3xl sm:text-4xl font-bold"
-        />
-
-
-        {/* Subtitle / description */}
-        <FadeContent 
-          blur={false} 
-          duration={3000} 
-          easing="ease-out" 
-          initialOpacity={0} 
-          delay={700}
-        >
-          <p className="text-lg sm:text-xl max-w-xl text-gray-300">
-            I design and develop reliable, user-focused applications across the web and beyond.
+        {/* Eyebrow (sits above the grid so the card aligns with the name) */}
+        <FadeContent blur duration={1200} easing="ease-out" initialOpacity={0}>
+          <p className="text-sm font-medium tracking-widest uppercase text-sky-400/80">
+            Software Engineer
           </p>
         </FadeContent>
 
+        {/* items-stretch makes both columns the same height */}
+        <div className="grid items-stretch gap-12 lg:grid-cols-[1.2fr_1fr]">
 
-        {/* Call to action buttons */}
-        <div className="mt-4 md:mt-10 flex flex-col md:flex-row justify-center gap-4">
+          {/* Left: name through to CTA buttons */}
+          <div className="flex flex-col items-start text-left gap-5">
 
-          <a
-            href="/Reece Davies CV 2.1 (tech).pdf"
-            download
-            className="
-              inline-flex
-              items-center
-              justify-center
-              gap-2
-              rounded-xl
-              bg-sky-600
-              px-6
-              py-3
-              font-medium
-              transition-all
-              duration-300
-              hover:bg-sky-500
-              hover:scale-[1.02]
-            "
-          >
-            <DownloadIcon />
-            Download CV
-          </a>
+            <FadeContent duration={1400} easing="ease-out" initialOpacity={0} delay={150}>
+              <h1 className="text-5xl sm:text-7xl font-semibold tracking-tight text-zinc-50">
+                Reece Davies
+              </h1>
+            </FadeContent>
 
+            <TextType
+              text={phrases}
+              typingSpeed={60}
+              pauseDuration={2000}
+              showCursor
+              cursorCharacter="_"
+              className="text-xl sm:text-2xl text-zinc-400"
+            />
 
-          <a
-            href="#contact"
-            className="
-              inline-flex
-              items-center
-              justify-center
-              gap-2
-              rounded-xl
-              border
-              border-zinc-700
-              bg-zinc-900/40
-              backdrop-blur-md
-              px-6
-              py-3
-              font-medium
-              transition-all
-              duration-300
-              hover:border-sky-500
-              hover:text-sky-300
-            "
-          >
-            Contact Me
-            <ArrowRightIcon />
-          </a>
+            <FadeContent duration={2000} easing="ease-out" initialOpacity={0} delay={600}>
+              <p className="text-base sm:text-lg max-w-lg text-zinc-400 leading-relaxed">
+                I design and develop reliable, user-focused applications across the web and beyond.
+              </p>
+            </FadeContent>
+
+            <div className="mt-4 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+              <a
+                href="/Reece Davies CV 2.1 (tech).pdf"
+                download
+                className="inline-flex items-center gap-2 rounded-xl bg-sky-600 px-6 py-3 font-medium text-white transition hover:bg-sky-500"
+              >
+                <DownloadIcon /> Download CV
+              </a>
+
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-2 rounded-xl border border-zinc-700 bg-zinc-900/40 backdrop-blur-md px-6 py-3 font-medium text-zinc-200 transition hover:border-zinc-500"
+              >
+                Contact me <ArrowRightIcon />
+              </a>
+
+              <div className="flex gap-4 text-zinc-500">
+                <a
+                  href="https://github.com/reece-davies"
+                  aria-label="GitHub"
+                  className="hover:text-zinc-200 transition"
+                >
+                  <GitHubLogoIcon width={22} height={22} />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/reece-davies-063436110/"
+                  aria-label="LinkedIn"
+                  className="hover:text-zinc-200 transition"
+                >
+                  <LinkedInLogoIcon width={22} height={22} />
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Right: code card (hidden below lg) */}
+          <div className="hidden lg:flex justify-end">
+            <ProfileCard />
+          </div>
 
         </div>
-
       </div>
-
     </section>
   );
 }
