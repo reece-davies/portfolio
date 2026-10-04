@@ -5,7 +5,7 @@ import FadeContent from "./reactbits/FadeContent";
 const experience = [
   {
     company: "Insync Insurance",
-    role: "Digital Service Desk Assistant",
+    role: "Digital Service Desk Developer",
     dates: "06/2025 - Present",
     responsibilities: [
       <>

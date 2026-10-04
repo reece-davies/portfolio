@@ -57,14 +57,14 @@ export default function Hero() {
               <a
                 href="/Reece Davies CV 2.1 (tech).pdf"
                 download
-                className="inline-flex items-center gap-2 rounded-xl bg-sky-600 px-6 py-3 font-medium text-white transition hover:bg-sky-500"
+                className="inline-flex items-center gap-2 rounded-xl bg-sky-700 px-6 py-3 font-medium text-white transition hover:bg-sky-600"
               >
                 <DownloadIcon /> Download CV
               </a>
 
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 rounded-xl border border-zinc-700 bg-zinc-900/40 backdrop-blur-md px-6 py-3 font-medium text-zinc-200 transition hover:border-zinc-500"
+                className="inline-flex items-center gap-2 rounded-xl border border-zinc-700 bg-zinc-900/25 backdrop-blur-md px-6 py-3 font-medium text-zinc-200 transition hover:border-zinc-500"
               >
                 Contact me <ArrowRightIcon />
               </a>
