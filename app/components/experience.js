@@ -2,190 +2,181 @@
 
 import FadeContent from "./reactbits/FadeContent";
 
+const InlineLink = ({ href, children }) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-sky-400 underline underline-offset-4 decoration-sky-500/40 hover:text-sky-300 hover:decoration-sky-300 transition"
+  >
+    {children}
+  </a>
+);
+
 const experience = [
   {
     company: "Insync Insurance",
-    role: "Digital Service Desk Developer",
-    dates: "06/2025 - Present",
-    responsibilities: [
-      <>
-        Provide frontline support for{" "}
-        <a
-          href="https://www.iceinsuretech.com/ice-policy/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-sky-400 underline underline-offset-4 decoration-sky-500/40 hover:text-sky-300 hover:decoration-sky-300 transition"
-        >
-          ICE Policy
-        </a>{" "}
-        (our digital products insurance software), diagnosing issues with configuration,
-        XML/Python rating scripts, document generation, and analytics requests.
-      </>,
-      "Investigate and identify root causes of software issues, proposing solutions for approved changes, and escalating to internal developers or third-party vendors when required.",
-      "Manage and resolve YouTrack tickets from internal users, ensuring timely and accurate responses while maintaining system integrity and compliance.",
-      "Collaborate with cross-functional teams to support future enhancements and software improvements, bridging the gap between support and development."
-    ]
-  },
-  {
-    company: "Insync Insurance",
-    role: "Operations Technician",
-    dates: "02/2024 - 06/2025",
-    responsibilities: [
-      "Optimised internal processes and authored process guides, including a streamlined New Starter & Leaver workflow for managers, Operations, and third parties.",
-      "Supported Accounts & Credit Control teams by processing API user policies, refund requests, and shortfall claims.",
-      <>
-        Collaborated with management to refine{" "}
-        <a
-          href="https://www.acturis.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-sky-400 underline underline-offset-4 decoration-sky-500/40 hover:text-sky-300 hover:decoration-sky-300 transition"
-        >
-          Acturis
-        </a>{" "}
-        configuration and templates, ensuring SMS, email, and documents were consistent,
-        cost-effective, and compliant.
-      </>,
-      "Oversaw core systems operations including monitoring alerts, managing hardware distribution, and maintaining software updates, while also serving as a designated fire warden and trained first-aider."
-    ]
+    roles: [
+      {
+        title: "Digital Service Desk Developer",
+        dates: "Jun 2025 – Present",
+        current: true,
+        tech: ["ICE Policy", "Python", "SQL", "XML"],
+        bullets: [
+          <>
+            Provide frontline support for{" "}
+            <InlineLink href="https://www.iceinsuretech.com/ice-policy/">ICE Policy</InlineLink>{" "}
+            (our digital products insurance software), diagnosing issues with configuration,
+            XML/Python rating scripts, document generation, and analytics requests.
+          </>,
+          "Investigate and identify root causes of software issues, proposing solutions for approved changes, and escalating to internal developers or third-party vendors when required.",
+          "Manage and resolve YouTrack tickets from internal users, ensuring timely and accurate responses while maintaining system integrity and compliance.",
+          "Collaborate with cross-functional teams to support future enhancements and software improvements, bridging the gap between support and development.",
+        ],
+      },
+      {
+        title: "Operations Technician",
+        dates: "Feb 2024 – Jun 2025",
+        tech: ["Acturis", "Process documentation", "Software maintenance"],
+        bullets: [
+          "Optimised internal processes and authored process guides, including a streamlined New Starter & Leaver workflow for managers, Operations, and third parties.",
+          "Supported Accounts & Credit Control teams by processing API user policies, refund requests, and shortfall claims.",
+          <>
+            Collaborated with management to refine{" "}
+            <InlineLink href="https://www.acturis.com/">Acturis</InlineLink>{" "}
+            configuration and templates, ensuring SMS, email, and documents were consistent,
+            cost-effective, and compliant.
+          </>,
+          "Oversaw core systems operations including monitoring alerts, managing hardware distribution, and maintaining software updates, while also serving as a designated fire warden and trained first-aider.",
+        ],
+      },
+    ],
   },
   {
     company: "Exeter Trampoline Academy",
-    role: "Trampoline Coach & Head of Marketing",
-    dates: "06/2020 - 07/2023",
-    responsibilities: [
-      "Worked as a Trampoline Coach alongside pursuing my athletic career full-time.",
-      <>
-        Promoted to{" "}
-        <a
-          href="https://www.instagram.com/exetertrampoline/?hl=en"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-sky-400 underline underline-offset-4 decoration-sky-500/40 hover:text-sky-300 hover:decoration-sky-300 transition"
-        >
-          Head of Marketing
-        </a>{" "}
-        in 2022, leveraging prior experience and MSc-level marketing education.
-      </>,
-      "Managed the club’s social media, newsletters, and public relations, implementing strategies that grew brand awareness and attracted new members.",
-      <>
-        Provided technical support for{" "}
-        <a
-          href="https://youtu.be/xVNqltGqnRw?si=ciOPRYbddqoH_dcP"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-sky-400 underline underline-offset-4 decoration-sky-500/40 hover:text-sky-300 hover:decoration-sky-300 transition"
-        >
-          SafeGaze
-        </a>{" "}
-        , a software system I built as part of my BSc project, assisting with account setup
-        and troubleshooting for the club.
-      </>
-    ]
+    roles: [
+      {
+        title: "Trampoline Coach & Head of Marketing",
+        dates: "Jun 2020 – Jul 2023",
+        tech: ["Social media", "Newsletters", "Technical support"],
+        bullets: [
+          "Worked as a Trampoline Coach alongside pursuing my athletic career full-time.",
+          <>
+            Promoted to{" "}
+            <InlineLink href="https://www.instagram.com/exetertrampoline/?hl=en">Head of Marketing</InlineLink>{" "}
+            in 2022, leveraging prior experience and MSc-level marketing education.
+          </>,
+          "Managed the club’s social media, newsletters, and public relations, implementing strategies that grew brand awareness and attracted new members.",
+          <>
+            Provided technical support for{" "}
+            <InlineLink href="https://youtu.be/xVNqltGqnRw?si=ciOPRYbddqoH_dcP">SafeGaze</InlineLink>, a software system I built as part of my BSc project, assisting with account setup
+            and troubleshooting for the club.
+          </>,
+        ],
+      },
+    ],
   },
   {
     company: "Met Office",
-    role: "Cyber Security Analyst (IT Industrial Placement)",
-    dates: "07/2019 - 06/2020",
-    responsibilities: [
-      "Awarded an Industrial Placement within the Met Office (Exeter), working in the Cyber Security Operations Centre (CSOC).",
-      "Monitored and logged security of internal systems, implementing preventative measures to improve overall security.",
-      <>
-        Was involved in the deployment of the{" "}
-        <a
-          href="https://www.elastic.co/customers/met-office"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-sky-400 underline underline-offset-4 decoration-sky-500/40 hover:text-sky-300 hover:decoration-sky-300 transition"
-        >
-          Logging, Monitoring and Alerting (LMA) Project
-        </a>
-        , using Elastic Stack detection tools to identify and report malicious activity.
-      </>,
-      "Gained professional experience in collaborative, technology-focused teams while strengthening practical cybersecurity skills and understanding of internal processes."
-    ]
-  }
+    roles: [
+      {
+        title: "Cyber Security Analyst (IT Industrial Placement)",
+        dates: "Jul 2019 – Jun 2020",
+        tech: ["Elastic Stack", "Security monitoring"],
+        bullets: [
+          "Awarded an Industrial Placement within the Met Office (Exeter), working in the Cyber Security Operations Centre (CSOC).",
+          "Monitored and logged security of internal systems, implementing preventative measures to improve overall security.",
+          <>
+            Was involved in the deployment of the{" "}
+            <InlineLink href="https://www.elastic.co/customers/met-office">Logging, Monitoring and Alerting (LMA) Project</InlineLink>
+            , using Elastic Stack detection tools to identify and report malicious activity.
+          </>,
+          "Gained professional experience in collaborative, technology-focused teams while strengthening practical cybersecurity skills and understanding of internal processes.",
+        ],
+      },
+    ],
+  },
 ];
 
 export default function Experience() {
   return (
-    <section
-      id="experience"
-      className="w-full py-14 px-2"
-    >
-      <div className="mx-auto max-w-7xl">
+    <section id="experience" className="w-full py-14 px-2">
+      <div className="mx-auto max-w-6xl">
 
-        <FadeContent
-          blur={false}
-          duration={1800}
-          easing="ease-out"
-          initialOpacity={0}
-          delay={200}
-        >
-
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">
+        <FadeContent blur={false} duration={800} easing="ease-out" initialOpacity={0} delay={100}>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-10">
             Experience
-          </h1>
-
+          </h2>
         </FadeContent>
 
-        <div className="space-y-7">
+        <ol className="relative ml-2 border-l border-zinc-800 space-y-10">
+          {experience.map((group, gi) => (
+            <li key={group.company} className="relative pl-6 md:pl-10">
 
-          {experience.map((job, index) => (
-            <FadeContent
-              key={index}
-              blur={false}
-              duration={1800}
-              easing="ease-out"
-              initialOpacity={0}
-              delay={250 + (index * 100)}
-            >
-              <div
-                className="
-                  rounded-3xl
-                  border
-                  border-zinc-700
-                  bg-zinc-900/40
-                  backdrop-blur-md
-                  p-8
-                  transition-all
-                  duration-300
-                  hover:-translate-y-1
-                  hover:border-sky-500/40
-                "
+              {/* Timeline dot */}
+              <span className="absolute -left-[5.5px] top-9 h-2.5 w-2.5 rounded-full bg-sky-500 ring-4 ring-[#0a0a0a]" />
+
+              <FadeContent
+                blur={false}
+                duration={800}
+                easing="ease-out"
+                initialOpacity={0}
+                delay={150 + gi * 100}
               >
+                <div className="rounded-3xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-md p-6 md:p-8 transition-colors duration-300 hover:border-sky-500/40">
 
-                <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-3">
+                  <h3 className="text-2xl font-semibold text-white">{group.company}</h3>
 
-                  <div>
-                    <h2 className="text-2xl font-semibold text-white">
-                      {job.company}
-                    </h2>
+                  <div className="mt-6 space-y-8">
+                    {group.roles.map((role, ri) => (
+                      <div
+                        key={role.title}
+                        className={ri > 0 ? "border-t border-zinc-800 pt-8" : ""}
+                      >
+                        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-1 md:gap-4">
+                          <p className="text-lg font-medium text-zinc-200">{role.title}</p>
+                          <div className="flex items-center gap-2 text-sm text-zinc-400 whitespace-nowrap">
+                            {role.current && (
+                              <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-0.5 text-xs text-emerald-300">
+                                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                                Current
+                              </span>
+                            )}
+                            {role.dates}
+                          </div>
+                        </div>
 
-                    <p className="mt-1 text-zinc-400 font-medium">
-                      {job.role}
-                    </p>
-                  </div>
+                        <ul className="mt-4 space-y-2.5 list-disc pl-5 text-zinc-300 leading-7 marker:text-zinc-600">
+                          {role.bullets.map((item, i) => (
+                            <li key={i}>{item}</li>
+                          ))}
+                        </ul>
 
-                  <div className="text-md text-zinc-400 whitespace-nowrap">
-                    {job.dates}
+                        <div className="mt-5 flex flex-wrap gap-2">
+                          {role.tech.map((t) => (
+                            <span
+                              key={t}
+                              className="rounded-full border border-zinc-800 bg-zinc-900/60 px-3 py-1 text-xs text-zinc-400"
+                            >
+                              {t}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
                   </div>
 
                 </div>
-
-                <ul className="mt-8 space-y-3 list-disc pl-6 text-zinc-300 leading-7">
-
-                  {job.responsibilities.map((item, i) => (
-                    <li key={i}>{item}</li>
-                  ))}
-
-                </ul>
-
-              </div>
-            </FadeContent>
+              </FadeContent>
+            </li>
           ))}
+        </ol>
 
-        </div>
+        <p className="mt-10 text-sm text-zinc-500">
+          Full history available in my{" "}
+          <InlineLink href="/Reece Davies CV 2.1 (tech).pdf">CV</InlineLink>.
+        </p>
+
       </div>
     </section>
   );
