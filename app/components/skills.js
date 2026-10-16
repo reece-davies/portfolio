@@ -17,7 +17,7 @@ export default function Skills() {
         initialOpacity={0}
         delay={200}
       >
-        <div className="max-w-7xl mx-auto mb-8">
+        <div className="max-w-6xl mx-auto mb-8">
 
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
             Core Skills
