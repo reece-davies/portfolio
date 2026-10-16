@@ -20,7 +20,7 @@ const navLinks = [
   { id: "profilesummary", label: "Profile Summary", Icon: PersonIcon },
   { id: "experience", label: "Experience", Icon: BackpackIcon },
   { id: "projects", label: "Projects", Icon: CodeIcon },
-  { id: "skills", label: "Skills", Icon: LightningBoltIcon },
+  { id: "skills", label: "Core Skills", Icon: LightningBoltIcon },
   { id: "contact", label: "Contact", Icon: EnvelopeClosedIcon },
 ];
 

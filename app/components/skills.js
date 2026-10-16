@@ -20,7 +20,7 @@ export default function Skills() {
         <div className="max-w-7xl mx-auto mb-8">
 
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-            Skills
+            Core Skills
           </h1>
 
         </div>
