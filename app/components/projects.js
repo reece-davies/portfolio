@@ -88,7 +88,7 @@ function ProjectCard({ project, featured, reversed, first }) {
   return (
     <div
       className={`
-        group flex h-full flex-col rounded-3xl border border-zinc-800 bg-zinc-900/40
+        group flex h-full flex-col rounded-3xl border border-zinc-700 bg-zinc-900/40
         backdrop-blur-md p-5 transition-colors duration-300 hover:border-sky-500/40
         ${featured ? `lg:flex-row lg:items-stretch lg:gap-8 lg:p-6 ${reversed ? "lg:flex-row-reverse" : ""}` : ""}
       `}
@@ -101,11 +101,11 @@ function ProjectCard({ project, featured, reversed, first }) {
         aria-label={`${project.name}: ${primary.label}`}
         className={`block ${featured ? "lg:w-[52%] lg:shrink-0" : ""}`}
       >
-        <div className="overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950/60">
-          <div className="flex items-center gap-1.5 border-b border-zinc-800 px-3 py-2">
-            <span className="h-2 w-2 rounded-full bg-zinc-700" />
-            <span className="h-2 w-2 rounded-full bg-zinc-700" />
-            <span className="h-2 w-2 rounded-full bg-zinc-700" />
+        <div className="overflow-hidden rounded-xl border border-zinc-700 bg-zinc-950/60">
+          <div className="flex items-center gap-1.5 border-b border-zinc-700 px-3 py-2">
+            <span className="h-2 w-2 rounded-full bg-red-700" />
+            <span className="h-2 w-2 rounded-full bg-yellow-700" />
+            <span className="h-2 w-2 rounded-full bg-green-700" />
             <span className="ml-2 truncate font-mono text-[11px] text-zinc-500">
               {windowLabel}
             </span>

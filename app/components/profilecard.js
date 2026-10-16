@@ -37,12 +37,12 @@ export default function ProfileCard() {
       delay={500}
       className="h-full w-full max-w-md"
     >
-      <div className="flex h-full w-full flex-col rounded-2xl border border-zinc-800/60 bg-zinc-900/25 backdrop-blur-sm font-mono text-sm shadow-xl">
+      <div className="flex h-full w-full flex-col rounded-2xl border border-zinc-700/60 bg-zinc-900/25 backdrop-blur-sm font-mono text-sm shadow-xl">
         {/* Title bar */}
-        <div className="flex items-center gap-2 border-b border-zinc-800 px-4 py-3">
-          <span className="h-3 w-3 rounded-full bg-zinc-700" />
-          <span className="h-3 w-3 rounded-full bg-zinc-700" />
-          <span className="h-3 w-3 rounded-full bg-zinc-700" />
+        <div className="flex items-center gap-2 border-b border-zinc-700 px-4 py-3">
+          <span className="h-3 w-3 rounded-full bg-red-700" />
+          <span className="h-3 w-3 rounded-full bg-yellow-700" />
+          <span className="h-3 w-3 rounded-full bg-green-700" />
           <span className="ml-2 text-xs text-zinc-500">reece.js</span>
         </div>
 

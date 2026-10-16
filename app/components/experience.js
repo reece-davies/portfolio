@@ -109,7 +109,7 @@ export default function Experience() {
           </h2>
         </FadeContent>
 
-        <ol className="relative ml-2 border-l border-zinc-800 space-y-10">
+        <ol className="relative ml-2 border-l border-zinc-700 space-y-10">
           {experience.map((group, gi) => (
             <li key={group.company} className="relative pl-6 md:pl-10">
 
@@ -123,7 +123,7 @@ export default function Experience() {
                 initialOpacity={0}
                 delay={150 + gi * 100}
               >
-                <div className="rounded-3xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-md p-6 md:p-8 transition-colors duration-300 hover:border-sky-500/40">
+                <div className="rounded-3xl border border-zinc-700 bg-zinc-900/40 backdrop-blur-md p-6 md:p-8 transition-colors duration-300 hover:border-sky-500/40">
 
                   <h3 className="text-2xl font-semibold text-white">{group.company}</h3>
 
