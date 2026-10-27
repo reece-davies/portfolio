@@ -8,52 +8,52 @@ import FadeContent from "./reactbits/FadeContent";
 const projects = [
   {
     id: 1,
-    name: "SafeGaze",
-    context: "Final year BSc Computer Science project: a Sports Facility Observation System.",
-    image: "/projectimages/safegaze.jpeg",
-    video: "https://youtu.be/xVNqltGqnRw?si=0bzdxiS1scWNCbg0",
-    github: "https://github.com/reece-davies/SafeGaze-Computing-Project",
-    tech: ["PHP", "SQL"],
+    name: "Met Office LMA Project",
+    context: "Contributed to the Logging, Monitoring and Alerting (LMA) project at the Met Office, using the Elastic Stack to search, analyse and visualise large volumes of system data. The project supported the Cyber Security team's ability to identify and investigate potential threats by making relevant information more accessible and actionable.",
+    image: "/projectimages/metoffice.png",
+    video: "https://www.elastic.co/customers/met-office",
+    tech: ["Elastic Stack"],
     featured: true,
   },
   {
     id: 2,
+    name: "SafeGaze",
+    context: "A sports facility observation system developed as my final-year BSc Computer Science project. SafeGaze explores how software can support the observation and monitoring of sporting environments, bringing together a purpose-built application to support the facility's operational needs.",
+    image: "/projectimages/safegaze.jpeg",
+    video: "https://youtu.be/xVNqltGqnRw?si=0bzdxiS1scWNCbg0",
+    github: "https://github.com/reece-davies/SafeGaze-Computing-Project",
+    tech: ["PHP", "SQL"],
+  },
+  {
+    id: 3,
     name: "LoveBites",
-    context: "Web app for recipe management and shopping list creation. Personal test project for Firebase functionality.",
+    context: "A recipe management web application that helps users organise their recipes and build shopping lists around the meals they want to prepare. Built with Next.js and Firebase, the project also served as a practical exploration of Firebase integration within a modern web application.",
     image: "/projectimages/lovebites.jpeg",
     demo: "https://love-bites.vercel.app/",
     github: "https://github.com/reece-davies/LoveBites",
     tech: ["Next.js", "Firebase", "Tailwind CSS"],
   },
   {
-    id: 3,
+    id: 4,
     name: "Machine Learning: Handwriting Detection",
-    context: "Python project implementing machine learning with a custom GUI to recognise letters drawn by the user.",
+    context: "A Python machine learning application that recognises handwritten characters drawn by the user through a custom graphical interface. The project combines character recognition with an interactive GUI, demonstrating the practical application of machine learning to user-provided input.",
     image: "/projectimages/machinelearning.png",
     github: "https://github.com/reece-davies/Python-AI-Handwriting-Detection",
     tech: ["Python", "Pandas", "NumPy", "Sklearn"],
   },
   {
-    id: 4,
+    id: 5,
     name: "Ant Colony Simulation",
-    context: "A C# project to simulate the behaviour of ant colonies and their response to food sources (within close proximity) and neighbouring colonies.",
+    context: "A C# simulation exploring ant colony behaviour and interactions with their environment. The simulation models how ants respond to nearby food sources and neighbouring colonies, providing a way to experiment with the collective behaviour that emerges from simple agent interactions.",
     image: "/projectimages/antcolonysimulation.jpeg",
     github: "https://github.com/reece-davies/Ant-Colony-Simulation",
     tech: ["C#", ".NET"],
   },
   {
-    id: 5,
-    name: "Pixel Art Editor",
-    context: "Simple pixel art editor created with Next.js.",
-    image: "/projectimages/pixelarteditor.jpeg",
-    demo: "https://pixel-art-editor-theta.vercel.app/",
-    github: "https://github.com/reece-davies/pixel-art-editor",
-    tech: ["Next.js", "Tailwind CSS"],
-  },
-  {
-    id: 6,
+    id: 7,
     name: "Inventory-Sync",
-    context: "MERN stack app for inventory management. Fully functional and deployed to Render.",
+    context: `A full-stack inventory management application built with the MERN stack, featuring secure JWT-based authentication and real-time updates. Users can organise and categorise assets, assign custom statuses, and track inventory through structured data tables. The application is deployed on Render and demonstrates the integration of a React frontend with a Node.js, Express and MongoDB backend.
+    The live demo is currently running without its backend services, so login and inventory management functionality are unavailable. Please refer to the source code for the full implementation.`,
     image: "/projectimages/inventorysync.PNG",
     demo: "https://inventory-sync-frontend.onrender.com/",
     github: "https://github.com/reece-davies/Inventory-Sync",
@@ -275,7 +275,6 @@ export default function Projects() {
           >
             GitHub <ArrowRightIcon />
           </a>
-          .
         </p>
 
       </div>
