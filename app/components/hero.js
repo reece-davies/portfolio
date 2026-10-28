@@ -55,7 +55,7 @@ export default function Hero() {
 
             <div className="mt-4 flex flex-col sm:flex-row items-start sm:items-center gap-4">
               <a
-                href="/Reece Davies CV 2.1 (tech).pdf"
+                href="/Reece_Davies_CV.pdf"
                 download
                 className="inline-flex items-center gap-2 rounded-xl bg-sky-700 px-6 py-3 font-medium text-white transition hover:bg-sky-600"
               >
